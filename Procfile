@@ -1,0 +1,1 @@
+web: gunicorn Coreys.wsgi --log-file -
