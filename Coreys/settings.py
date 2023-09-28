@@ -83,8 +83,15 @@ WSGI_APPLICATION = 'Coreys.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django_cockroachdb',
+        'NAME': 'blog-db',
+        'USER': 'aryan',
+        'PASSWORD': 'lu0ubOeHfZxGsK8x2zxgaw',
+        'HOST': 'husky-blob-6494.8nk.cockroachlabs.cloud',
+        'PORT': '26257',
+        'OPTIONS': {
+            'sslmode': 'require'
+        },
     }
 }
 
